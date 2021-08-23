@@ -13,11 +13,7 @@ function getLiteralValueOfNumber(input) {
 
     let map = extractReminders(input).map((number => {
         let amountOfZeros = (number.toString().match(/0/g) || []).length;
-        console.log("here 2 ;;; " + amountOfZeros);
-
         if (amountOfZeros < 3) {
-            console.log("here 3");
-
             return convertNumberToLiteralValue(number);
         } else if (amountOfZeros >= 3 && amountOfZeros < 6) {
             let result = number / Math.pow(10, 3);
